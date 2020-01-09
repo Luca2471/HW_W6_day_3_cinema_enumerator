@@ -20,9 +20,9 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
   });
 };
 
-Traveller.prototype.getJourneysByMinDistance = function (dist, distance) {
-  return this.journeys.filter((journey) => {
-    return distance[dist] >= distance;
+Traveller.prototype.getJourneysByMinDistance = function (distance) {
+  return this.journeys.every((journey) => {
+    return distance >= distance;
   });
 };
 
